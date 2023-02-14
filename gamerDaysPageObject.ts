@@ -30,7 +30,7 @@ export class GamerDaysPageObject extends BasePage {
     searchField: By = By.xpath("bySearchNavBar")
     results: By = By.css("[class='coveo-result-list-container coveo-list-layout-container']")
     async searchAndValidateResults(searchTerm: string) {
-        await this.click(this.searchField)
+        await this.clickSpecial(this.searchField)
         console.log("1.1 Clicked search field")
         return this.setInput(this.searchField, `${searchTerm}\n`) // might need naother id as seen in https://github.com/stephaniecp/steph-solo-project/blob/main/mainPageObject.ts
         console.log("Typed search query")

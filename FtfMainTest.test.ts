@@ -6,7 +6,7 @@ const ftfMainPageObject = new FtfMainPageObject()
 
 beforeAll(async () => {
   await ftfMainPageObject.navigate()
-//   await ftfMainPageObject.showMouseMovement()
+  await ftfMainPageObject.showMouseMovement()
   await ftfMainPageObject.driver.manage().window().maximize()
 })
 
@@ -39,6 +39,6 @@ describe("3- ___", () => {
 // })
 
 afterAll(async () => {
-    await ftfMainPageObject.driver.quit()
+    await ftfMainPageObject.gentleBrowserClose();
     console.log("AFTER ALL - Browser quit")
 });

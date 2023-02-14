@@ -51,20 +51,21 @@ export class FtfMainPageObject extends BasePage {
 //     } 
 
     async navigateToStayUpToDateForm() {
-        await this.click(this.byNavAboutFtf)
-        await this.click(this.byNavAboutFtfWhatWeDo)
+        await this.clickSpecial(this.byNavAboutFtf)
+        await this.clickSpecial(this.byNavAboutFtfWhatWeDo)
     }
     async hardCodedStayUpToDateFormFilling() {
-        await this.click(this.WhatWedDoFormFirstName)
+        //await this.clickSpecial(this.WhatWedDoFormFirstName)
         await this.setInput(this.WhatWedDoFormFirstName, "John")
-        await this.click(this.WhatWedDoFormLastName)
+        //await this.clickSpecial(this.WhatWedDoFormLastName)
         await this.setInput(this.WhatWedDoFormLastName, "Doe")
-        await this.click(this.WhatWedDoFormEmail)
+        //await this.clickSpecial(this.WhatWedDoFormEmail)
         await this.setInput(this.WhatWedDoFormEmail, "johndoe@johndoe.com")
-        await this.click(this.WhatWedDoFormCheckNews)
-        await this.click(this.WhatWedDoFormCheckParenting)
-        await this.click(this.WhatWedDoFormCheckNotifications)
-        await this.click(this.WhatWedDoFormCheckInformtion)
+
+        await this.clickSpecial(this.WhatWedDoFormCheckNews)
+        await this.clickSpecial(this.WhatWedDoFormCheckParenting)
+        await this.clickSpecial(this.WhatWedDoFormCheckNotifications)
+        await this.clickSpecial(this.WhatWedDoFormCheckInformtion)
     }
 
 } // End Of Export (class: FtfMainPageObject)
