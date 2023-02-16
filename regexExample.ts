@@ -16,12 +16,12 @@ for (let categoryText of categoryTexts) {
     console.log(`Looking at category text: ${categoryText}`)
     const nameMatch = nameMatchRegex.exec(categoryText)
     if (nameMatch) {
-        console.log(`> matched name: ${nameMatch[0]}`)
+        console.log(`> matched name: '${nameMatch[0].trim()}'`)
     }
 
     const numberMatch = numberMatchRegex.exec(categoryText)
     if (numberMatch) {
-        console.log(`> matched number: ${numberMatch[0]}`)
+        console.log(`> matched number: '${numberMatch[0]}'`)
     } else {
         console.log(`> ${numberMatch}`)
     }
